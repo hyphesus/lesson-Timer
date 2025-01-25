@@ -1,0 +1,52 @@
+[build-system]
+requires = ["briefcase>=0.3.17"]
+build-backend = "briefcase.shim"
+
+[project]
+name = "berhans_lesson_timer"
+version = "0.1.0"
+description = "A Toga-based lesson timer with 40-min and 13-min timers"
+authors = [
+    { name = "Berhan", email = "[email protected]" }
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "toga==0.3.0.dev36",
+    "plyer",
+]
+
+[tool.briefcase]
+project_name = "Berhan's Lesson Timer"
+bundle = "com.hyphesus.lessontimer"
+formal_name = "Berhan's Lesson Timer"
+version = "0.1.0"
+description = "A Toga-based lesson timer with 40-min and 13-min timers"
+author = "Berhan"
+author_email = "[email protected]"
+url = "https://example.com"
+
+supported_backends = [
+    "android",
+    "macOS",
+    "iOS",
+    "linux",
+    "windows"
+]
+
+[tool.briefcase.app.berhans_lesson_timer]
+project_name = "Berhan's Lesson Timer"
+bundle = "com.hyphesus.lessontimer"
+formal_name = "Berhan's Lesson Timer"
+description = "A Toga-based lesson timer with 40-min and 13-min timers"
+sources = ["src/berhans_lesson_timer"]
+# Removed the template field to use the default template
+icon = "resources/icon"
+splash = "resources/splash"
+
+# If you need specific Android settings, you can add them as well:
+# [tool.briefcase.app.berhans_lesson_timer.android]
+# gradle_version = "7.0.2"
+# sdk_version = "31"
